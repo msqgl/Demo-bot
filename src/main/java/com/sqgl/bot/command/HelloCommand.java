@@ -13,7 +13,6 @@ public class HelloCommand extends BotCommand {
     super("hello", "Il bot ti saluta.");
   }
 
-
   @Override
   public void execute(AbsSender absSender, User user, Chat chat, String[] strings) {
 

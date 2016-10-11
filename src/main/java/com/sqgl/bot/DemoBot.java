@@ -1,5 +1,6 @@
 package com.sqgl.bot;
 
+import com.sqgl.bot.command.DateCommand;
 import com.sqgl.bot.command.HelloCommand;
 import com.sqgl.bot.conf.DemoBotConfig;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
@@ -12,6 +13,7 @@ public class DemoBot extends TelegramLongPollingCommandBot {
 
   public DemoBot() {
     register(new HelloCommand());
+    register(new DateCommand());
   }
 
   public void processNonCommandUpdate(Update update) {
@@ -38,7 +40,5 @@ public class DemoBot extends TelegramLongPollingCommandBot {
   public String getBotToken() {
     return DemoBotConfig.BOT_TOKEN;
   }
-
-
 
 }
